@@ -1,0 +1,6 @@
+{{input value=newItem  placeholder="Enter new item"}}
+<button class="btn btn-info btn-xs" {{action 'addItem' newItem}}>Add Item</button><br><br>
+
+{{#each arrayOfItem as |item|}}
+	Item Name: {{item}} <button class="btn btn-danger btn-xs" {{action 'deleteItem' item }}>Delete</button><br>
+{{/each}}

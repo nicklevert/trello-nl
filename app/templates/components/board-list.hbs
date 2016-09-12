@@ -1,0 +1,13 @@
+{{input value=newBoard  placeholder="Enter board name"}}
+<button class="btn btn-primary btn-xs" {{action 'addBoard' newBoard}}>Add Board</button><br><br>
+
+<div class="row">
+	{{#each arrayOfBoard as |board|}}
+		<div class="col-sm-6 col-md-3">
+	    	<div class="boards">
+				<h4>Board Name: {{board}}</h4>
+				{{item-list}}
+			</div>
+		</div>
+	{{/each}}
+</div>
